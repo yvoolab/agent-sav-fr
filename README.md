@@ -27,7 +27,7 @@ Jeu d'évaluation : 16 e-mails réalistes (`data/evals.json`), dont un en anglai
 | Version | Score | Ce qui a changé |
 |---|---|---|
 | v1 | 15/16 | colis non reçu transféré sans vérifier la commande ([journal](runs/eval-2026-10-02-v1.log)) |
-| v2 | 16/16 | règle : vérifier la commande avant tout transfert. Relecture des brouillons : une adresse de retour inventée, une réponse en français à un client anglophone ([journal](runs/eval-2026-10-02-v2.log)) |
+| v2 | 16/16 | règle : vérifier la commande avant tout transfert. Relecture des brouillons : repéré une adresse de retour inventée et une réponse en français à un client anglophone (corrigés en v3) ([journal](runs/eval-2026-10-02-v2.log)) |
 | v3 | 16/16 | FAQ complétée (procédure de retour), règles sur la langue et sur ce que l'agent ne peut pas faire, critère de langue ajouté à l'évaluation ([journal](runs/eval-2026-10-02.log)) |
 
 Modèle : `openai/gpt-oss-120b` via Groq, température 0. Un modèle reste non déterministe : l'évaluation rejoue une fois chaque cas raté et affiche les deux scores (premier essai / après nouvelle tentative). Les journaux complets, brouillons compris, sont dans `runs/`.
