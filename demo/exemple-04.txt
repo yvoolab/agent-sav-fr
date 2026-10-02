@@ -1,0 +1,23 @@
+De : k.nguyen@example.com
+Objet : Tasse cassée
+
+Bonjour, j'ai reçu ma commande CMD-1047 mais une des deux tasses est arrivée fêlée. Que faire ? 
+────────────────────────────────────────────────────────────
+  → chercher_commande({"numero": "CMD-1047"})
+  ← CMD-1047 · livrée
+  → chercher_faq({"question": "article cassé retour"})
+  ← Article cassé, fêlé ou endommagé à la réception | Comment retourner un article | Droit de rétractation et retours
+────────────────────────────────────────────────────────────
+ACTION : BROUILLON
+BROUILLON (à relire avant envoi) :
+
+Bonjour Kevin,
+
+Nous sommes désolés d’apprendre que l’une de vos tasses est arrivée fêlée.
+
+Merci de bien vouloir nous envoyer, en réponse à cet e‑mail, une photo de la tasse endommagée ainsi que du colis, et ce dans les 7 jours suivant la réception. Dès réception de la photo, nous vous expédierons un remplacement sans frais. Si le modèle n’est plus disponible, nous procéderons au remboursement de cet article.
+
+Il n’est pas nécessaire de nous renvoyer la tasse cassée.
+
+Dans l’attente de votre retour,  
+Le service client Maison Ardoise

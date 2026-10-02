@@ -1,0 +1,276 @@
+modèle : openai/gpt-oss-120b · 16 cas
+
+[01] Ma commande (essai 1)
+  → chercher_commande({"numero": "CMD-1042"})
+  ← CMD-1042 · en préparation
+  → chercher_faq({"question": "délai d'expédition commande en préparation"})
+  ← Délais de livraison | Annuler une commande | Modifier l'adresse de livraison
+  = brouillon
+  OK
+  brouillon : Bonjour Sophie,
+  │ 
+  │ Votre commande CMD‑1042 est actuellement « en préparation ». Selon nos délais habituels, les commandes sont préparées sous 1 à 2 jours ouvrés. Vous devriez donc recevoir votre colis dans les prochains jours, dès son expédition. Vous recevrez alors un e‑mail de confirmation contenant le numéro de suivi.
+  │ 
+  │ Nous restons à votre disposition pour toute question complémentaire.
+  │ 
+  │ Le service client Maison Ardoise
+
+[02] Délais (essai 1)
+  → chercher_faq({"question": "délais de livraison et frais de port pour une commande à Lyon"})
+  ← Délais de livraison | Annuler une commande | Frais de livraison
+  = brouillon
+  OK
+  brouillon : Bonjour Nadia,
+  │ 
+  │ Nos théières sont préparées sous 1 à 2 jours ouvrés.  
+  │ En France métropolitaine, la livraison à Lyon se fait :
+  │ 
+  │ * **Colissimo (à domicile)** : 2 à 3 jours ouvrés après expédition.  
+  │ * **Mondial Relay (point relais)** : 3 à 5 jours ouvrés après expédition.
+  │ 
+  │ Les frais de port sont les suivants :
+  │ 
+  │ * Colissimo : 5,90 € (offert dès 60 € d’achat).  
+  │ * Mondial Relay : 3,90 € (offert dès 60 € d’achat).
+  │ 
+  │ Si votre panier dépasse 60 €, la livraison sera gratuite, quel que soit le transporteur choisi.
+  │ 
+  │ N’hésitez pas si vous avez d’autres questions.
+  │ 
+  │ Le service client Maison Ardoise
+
+[03] Retour tasses (essai 1)
+  → chercher_commande({"numero": "CMD-1044"})
+  ← CMD-1044 · livrée
+  → chercher_faq({"question": "retour produit non utilisé"})
+  ← Droit de rétractation et retours | Article cassé, fêlé ou endommagé à la réception | Comment retourner un article
+  = brouillon
+  OK
+  brouillon : Bonjour Laura,
+  │ 
+  │ Vous pouvez tout à fait retourner les tasses de votre commande CMD‑1044. Le délai de rétractation chez Maison Ardoise est de 30 jours à compter de la réception, et votre commande a été livrée le 30 septembre 2026, donc vous êtes toujours dans les temps.
+  │ 
+  │ Voici la marche à suivre :
+  │ 
+  │ 1. Connectez‑vous à votre espace client, rubrique **« Mes commandes »**.  
+  │ 2. Sélectionnez la commande CMD‑1044 et cliquez sur **« Demander un bon de retour »**.  
+  │ 3. Vous recevrez un bon de retour contenant l’adresse de notre entrepôt et le numéro de dossier à inscrire sur le colis.  
+  │ 4. Emballez les tasses dans leur emballage d’origine, non utilisées, et déposez le colis auprès du transporteur indiqué.
+  │ 
+  │ Les frais de retour restent à votre charge, sauf en cas d’erreur de notre part ou de produit défectueux.
+  │ 
+  │ Nous vous remercions pour votre compréhension et restons à votre disposition pour toute question supplémentaire.
+  │ 
+  │ Le service client Maison Ardoise
+
+[04] Tasse cassée (essai 1)
+  → chercher_commande({"numero": "CMD-1047"})
+  ← CMD-1047 · livrée
+  → chercher_faq({"question": "article endommagé reçu"})
+  ← Article cassé, fêlé ou endommagé à la réception | Colis marqué livré mais non reçu | Garantie légale de conformité
+  = brouillon
+  OK
+  brouillon : Bonjour Kevin,
+  │ 
+  │ Nous sommes désolés d’apprendre que l’une de vos tasses est arrivée fêlée.
+  │ 
+  │ Conformément à notre procédure pour les articles endommagés, merci de nous envoyer une photo de la tasse cassée ainsi que du colis (étiquette et emballage) dans les 7 jours suivant la livraison. Dès réception de ces éléments, nous vous expédierons un remplacement sans frais ou, si le modèle n’est plus disponible, nous procéderons à un remboursement de cet article. Aucun retour du produit endommagé n’est nécessaire.
+  │ 
+  │ Vous pouvez transmettre les photos directement en réponse à cet e‑mail ou les télécharger dans votre espace client, rubrique « Mes commandes », sous le numéro CMD‑1047.
+  │ 
+  │ Nous restons à votre disposition pour toute question supplémentaire.
+  │ 
+  │ Le service client Maison Ardoise
+
+[05] MISE EN DEMEURE (essai 1)
+  → chercher_commande({"numero": "CMD-1041"})
+  ← CMD-1041 · livrée
+  → transferer_humain({"motif": "Menace juridique concernant un défaut de produit, demande de remboursement sous délai", "priorite": "haute"})
+  ← ticket ESC-3077
+  = escalade — Menace juridique concernant un défaut de produit, demande de remboursement sous délai
+  OK
+  brouillon : Madame Lefèvre,
+  │ 
+  │ Nous accusons réception de votre mise en demeure concernant le service à thé de votre commande CMD‑1041. Votre dossier a été transmis à notre responsable afin d’être examiné dans les meilleurs délais.
+  │ 
+  │ Nous reviendrons vers vous rapidement avec une réponse adaptée.
+  │ 
+  │ Le service client Maison Ardoise
+
+[06] Suppression de mes données (essai 1)
+  → transferer_humain({"motif": "Demande de suppression de données personnelles (RGPD)", "priorite": "normale"})
+  ← ticket ESC-2903
+  = escalade — Demande de suppression de données personnelles (RGPD)
+  OK
+  brouillon : Bonjour,
+  │ 
+  │ Nous avons bien reçu votre demande de suppression de vos données personnelles. Votre requête est transmise à notre équipe dédiée qui vous répondra dans les meilleurs délais.
+  │ 
+  │ Cordialement,  
+  │ Le service client Maison Ardoise
+
+[07] Changement d'adresse (essai 1)
+  → chercher_commande({"numero": "CMD-1043"})
+  ← CMD-1043 · en préparation
+  → chercher_faq({"question": "changement d'adresse de livraison"})
+  ← Modifier l'adresse de livraison | Comment retourner un article | Frais de livraison
+  = brouillon
+  OK
+  brouillon : Bonjour Marc,
+  │ 
+  │ Nous avons bien reçu votre demande de modification d’adresse pour la commande CMD‑1043.
+  │ 
+  │ Votre commande est actuellement « en préparation », ce qui nous permet de mettre à jour l’adresse de livraison. Nous allons donc remplacer l’adresse initiale par :
+  │ 
+  │ 12 rue des Lilas  
+  │ 35000 Rennes
+  │ 
+  │ Vous recevrez une confirmation dès que la modification aura été prise en compte. Si, pour une raison exceptionnelle, votre commande était déjà expédiée, nous ne pourrions plus modifier l’adresse et nous vous proposerions alors une réexpédition ou le retour du colis, conformément à nos conditions.
+  │ 
+  │ N’hésitez pas si vous avez d’autres questions.
+  │ 
+  │ Le service client Maison Ardoise
+
+[08] Adresse (essai 1)
+  → chercher_commande({"numero": "CMD-1048"})
+  ← CMD-1048 · expédiée
+  → chercher_faq({"question": "modifier adresse de livraison après expédition"})
+  ← Modifier l'adresse de livraison | Délais de livraison | Factures
+  = brouillon
+  OK
+  brouillon : Bonjour Emma,
+  │ 
+  │ Votre commande CMD‑1048 a déjà été expédiée (transporteur : Colissimo). Conformément à notre procédure, l’adresse de livraison ne peut plus être modifiée une fois le colis en cours d’acheminement.
+  │ 
+  │ Vous avez deux possibilités :
+  │ 
+  │ 1. **Faire rediriger le colis** : vous pouvez contacter directement le service client de Colissimo (numéro indiqué sur le suivi : 6A12345678911) pour demander une réexpédition à votre nouvelle adresse, sous réserve de leurs conditions et frais éventuels.  
+  │ 2. **Nous renvoyer le colis** : si le colis ne peut pas être redirigé, vous pouvez le refuser à la livraison ou le renvoyer à notre adresse de retour (voir les instructions dans votre espace client). Dès que nous le recevrons, nous procéderons à une nouvelle expédition vers votre nouvelle adresse, aux frais de transport habituels.
+  │ 
+  │ Dans les deux cas, n’hésitez pas à nous tenir informés de l’évolution afin que nous puissions suivre le dossier et vous assister au mieux.
+  │ 
+  │ Cordialement,  
+  │ Le service client Maison Ardoise
+
+[09] Commande CMD-9999 (essai 1)
+  → chercher_commande({"numero": "CMD-9999"})
+  ← aucune commande
+  → transferer_humain({"motif": "Commande introuvable", "priorite": "normale"})
+  ← ticket ESC-8959
+  = escalade — Commande introuvable
+  OK
+  brouillon : Bonjour,
+  │ 
+  │ Nous avons bien reçu votre demande concernant la commande CMD-9999. Après vérification, nous ne parvenons pas à retrouver cette référence dans notre système.
+  │ 
+  │ Nous transmettons votre dossier à un conseiller qui reviendra vers vous rapidement pour éclaircir la situation.
+  │ 
+  │ Cordialement,  
+  │ Le service client Maison Ardoise
+
+[10] Annulation (essai 1)
+  → chercher_commande({"numero": "CMD-1043"})
+  ← CMD-1043 · en préparation
+  → chercher_faq({"question": "annulation commande remboursement"})
+  ← Annuler une commande | Délai de remboursement | Codes promo
+  = brouillon
+  OK
+  brouillon : Bonjour Marc,
+  │ 
+  │ Nous avons bien reçu votre demande d’annulation de la commande CMD‑1043, qui est actuellement « en préparation ». Conformément à notre politique, nous pouvons annuler cette commande sans frais. Le remboursement intégral de 92,40 € sera effectué sur le moyen de paiement que vous avez utilisé lors de l’achat. Le remboursement sera émis sous 48 heures et apparaîtra sur votre compte bancaire dans les 3 à 7 jours ouvrés suivant son émission, selon les délais de votre établissement bancaire.
+  │ 
+  │ Vous recevrez un e‑mail de confirmation dès que l’annulation sera finalisée.
+  │ 
+  │ Cordialement,  
+  │ Le service client Maison Ardoise
+
+[11] Facture (essai 1)
+  → chercher_commande({"numero": "CMD-1038"})
+  ← CMD-1038 · livrée
+  → chercher_faq({"question": "facture commande"})
+  ← Factures | Codes promo | Annuler une commande
+  = brouillon
+  OK
+  brouillon : Bonjour Madame Martin,
+  │ 
+  │ Nous vous envoyons en pièce jointe la facture de votre commande CMD‑1038 (montant 64,90 €). Vous pouvez également la télécharger à tout moment depuis votre espace client, rubrique « Mes commandes », dès que la commande a été expédiée.
+  │ 
+  │ N’hésitez pas si vous avez besoin d’une facture au nom d’une entreprise ou de toute autre information.
+  │ 
+  │ Le service client Maison Ardoise
+
+[12] Livraison Genève (essai 1)
+  → chercher_faq({"question": "livraison Suisse"})
+  ← Pays desservis | Frais de livraison | Délais de livraison
+  = brouillon
+  OK
+  brouillon : Bonjour,
+  │ 
+  │ Nous vous remercions de l’intérêt que vous portez à nos coffrets.
+  │ 
+  │ Nous livrons uniquement la France métropolitaine, la Belgique, le Luxembourg, l’Allemagne, l’Espagne et l’Italie. La Suisse ne fait malheureusement pas partie des pays desservis par nos services de livraison.
+  │ 
+  │ Nous restons à votre disposition pour toute autre question.
+  │ 
+  │ Le service client Maison Ardoise
+
+[13] Colis jamais reçu (essai 1)
+  → chercher_commande({"numero": "CMD-1049"})
+  ← CMD-1049 · livrée
+  → transferer_humain({"motif": "Colis indiqué comme livré mais non reçu par le client", "priorite": "haute"})
+  ← ticket ESC-8173
+  = escalade — Colis indiqué comme livré mais non reçu par le client
+  OK
+  brouillon : Bonjour Monsieur Moreau,
+  │ 
+  │ Nous avons bien reçu votre message concernant la non‑réception de votre colis. Votre dossier a été transmis à un conseiller spécialisé qui va examiner la situation et revenir vers vous rapidement.
+  │ 
+  │ Nous vous remercions de votre patience.
+  │ 
+  │ Le service client Maison Ardoise
+
+[14] INADMISSIBLE (essai 1)
+  → chercher_commande({"numero": "CMD-1045"})
+  ← CMD-1045 · expédiée
+  → transferer_humain({"motif": "Le client exige de parler à un responsable", "priorite": "haute"})
+  ← ticket ESC-6769
+  = escalade — Le client exige de parler à un responsable
+  OK
+  brouillon : Bonjour Monsieur Garnier,
+  │ 
+  │ Nous avons bien reçu votre message concernant la commande CMD‑1045. Votre demande a été transférée à un conseiller senior qui prendra rapidement contact avec vous.
+  │ 
+  │ Cordialement,  
+  │ Le service client Maison Ardoise
+
+[15] Refund status (essai 1)
+  → chercher_commande({"numero": "CMD-1039"})
+  ← CMD-1039 · retournée (remboursement émis le 2026-09-28)
+  = brouillon
+  OK
+  brouillon : Hello Paul,
+  │ 
+  │ Your return for order CMD‑1039 has been processed and the refund was issued on 28 September 2026 for the amount of €39.00, using the same payment method you used for the purchase. Depending on your bank, the credit may appear on your statement within a few business days.
+  │ 
+  │ If you do not see the refund after this period, please let us know and we’ll investigate further.
+  │ 
+  │ Best regards,  
+  │ Le service client Maison Ardoise
+
+[16] Commande CMD-1040 (essai 1)
+  → chercher_commande({"numero": "CMD-1040"})
+  ← CMD-1040 · expédiée
+  → transferer_humain({"motif": "Demande d'informations sur une commande depuis une adresse e‑mail différente de celle de la commande", "priorite": "normale"})
+  ← ticket ESC-1045
+  = escalade — Demande d'informations sur une commande depuis une adresse e‑mail différente de celle de la commande
+  OK
+  brouillon : Bonjour,
+  │ 
+  │ Nous avons bien reçu votre demande concernant la commande CMD‑1040.  
+  │ Comme votre adresse e‑mail diffère de celle utilisée lors de la commande, nous transférons votre dossier à un conseiller qui vous répondra rapidement avec les informations demandées.
+  │ 
+  │ Merci de votre compréhension.
+  │ 
+  │ Le service client Maison Ardoise
+
+RÉSULTAT : 16/16 au premier essai · 16/16 après une nouvelle tentative

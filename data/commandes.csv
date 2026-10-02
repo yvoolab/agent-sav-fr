@@ -1,0 +1,13 @@
+numero,email,nom,date_commande,statut,transporteur,suivi,montant_eur,articles,date_livraison
+CMD-1038,claire.martin@example.com,Claire Martin,2026-09-18,livrée,Colissimo,6A12345678901,64.90,"Théière fonte 0,8 L",2026-09-22
+CMD-1039,paul.renaud@example.com,Paul Renaud,2026-09-20,retournée (remboursement émis le 2026-09-28),Colissimo,6A12345678902,39.00,"Coffret thés verts x6",2026-09-24
+CMD-1040,ines.belkacem@example.com,Inès Belkacem,2026-09-24,expédiée,Mondial Relay,MR88412093,28.50,"Bol grès émaillé x2",
+CMD-1041,j.lefevre@example.com,Julien Lefèvre,2026-09-25,livrée,Colissimo,6A12345678904,182.00,"Service à thé grès 6 pièces",2026-09-29
+CMD-1042,sophie.durand@example.com,Sophie Durand,2026-09-29,en préparation,,,47.80,"Thé noir Assam 250 g; Boule à thé inox",
+CMD-1043,marc.olivier@example.com,Marc Olivier,2026-09-30,en préparation,,,92.40,"Théière verre 1,2 L; Thé blanc 100 g",
+CMD-1044,laura.chen@example.com,Laura Chen,2026-09-26,livrée,Colissimo,6A12345678907,35.00,"Tasses ardoise x4",2026-09-30
+CMD-1045,t.garnier@example.com,Thomas Garnier,2026-09-27,expédiée,Colissimo,6A12345678908,58.00,"Coffret découverte 12 thés",
+CMD-1046,amelie.roux@example.com,Amélie Roux,2026-09-22,annulée,,,24.90,"Thé vert Sencha 100 g",
+CMD-1047,k.nguyen@example.com,Kevin Nguyen,2026-09-21,livrée,Mondial Relay,MR88412101,76.00,"Plateau chêne; Tasses ardoise x2",2026-09-25
+CMD-1048,emma.blanc@example.com,Emma Blanc,2026-09-30,expédiée,Colissimo,6A12345678911,41.50,"Thé Earl Grey 250 g",
+CMD-1049,h.moreau@example.com,Hugo Moreau,2026-09-19,livrée,Colissimo,6A12345678912,129.00,"Théière fonte 1,2 L; Réchaud",2026-09-23

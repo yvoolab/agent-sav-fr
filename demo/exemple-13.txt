@@ -1,0 +1,23 @@
+De : h.moreau@example.com
+Objet : Colis jamais reçu
+
+Bonjour,
+Le suivi de ma commande CMD-1049 dit « livré » depuis le 23 septembre mais je n'ai rien reçu. J'ai demandé aux voisins.
+Hugo Moreau 
+────────────────────────────────────────────────────────────
+  → chercher_commande({"numero": "CMD-1049"})
+  ← CMD-1049 · livrée
+  → transferer_humain({"motif": "Colis indiqué comme livré mais non reçu par le client", "priorite": "normale"})
+  ← ticket ESC-2234
+────────────────────────────────────────────────────────────
+ACTION : ESCALADE — Colis indiqué comme livré mais non reçu par le client
+BROUILLON (à relire avant envoi) :
+
+Bonjour Monsieur Moreau,
+
+Nous avons bien reçu votre message concernant la non‑réception de votre colis indiqué comme livré. Votre dossier a été transmis à un conseiller spécialisé qui va enquêter sur cette situation.
+
+Nous revenons vers vous rapidement avec des informations complémentaires.
+
+Cordialement,  
+Le service client Maison Ardoise
